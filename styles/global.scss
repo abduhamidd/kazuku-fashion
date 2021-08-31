@@ -1,0 +1,18 @@
+
+@import "./reset";
+@import "./typography";
+
+body {
+    background-color: black;
+    background-image: url("/texture/sec.jpg");
+    overflow-x: hidden;
+    min-height: 100vh;
+    min-width: 100vw;
+
+    &::-webkit-scrollbar { 
+        width: 0 !important; 
+    }
+    &::scrollbar { 
+        width: 0 !important; 
+    }
+}
