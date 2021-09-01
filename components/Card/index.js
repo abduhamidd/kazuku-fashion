@@ -1,8 +1,7 @@
-import './Card.styles.scss';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
 
-const Card = ({HREF, SRC, ALT, engCL, jpCL, Year, As}) => {
+const Card = ({HREF, SRC, ALT, engCL, jpCL, Year, AS}) => {
   return (
     <>
       <Link href={HREF} as={AS}>

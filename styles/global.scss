@@ -1,4 +1,4 @@
-
+@import './pages/home';
 @import "./reset";
 @import "./typography";
 
@@ -9,10 +9,10 @@ body {
     min-height: 100vh;
     min-width: 100vw;
 
-    &::-webkit-scrollbar { 
-        width: 0 !important; 
+    &::-webkit-scrollbar {
+        width: 0 !important;
     }
-    &::scrollbar { 
-        width: 0 !important; 
+    &::scrollbar {
+        width: 0 !important;
     }
 }

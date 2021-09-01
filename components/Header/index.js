@@ -1,7 +1,8 @@
-import './Header.styles.scss';
+import './Header.module.scss';
 import {useRouter} from 'next/router';
 import Logo from '../Logo';
 import BurgerMenu from './BurgerMenu';
+import CustomLink from './Link/index';
 const Header = () => {
   const __router = useRouter();
   function isRoute(route) {

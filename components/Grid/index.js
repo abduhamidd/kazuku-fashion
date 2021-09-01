@@ -1,8 +1,7 @@
-import './Grid.styles.scss';
 const Grid = ({children}) => {
   return (
     <>
-      <section id="collections-grid">{chilren}</section>
+      <section id="collections-grid">{children}</section>
     </>
   );
 };

@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 const Meta = ({titleShort, titleLong, description, url, keywords}) => {
   return (
     <>
