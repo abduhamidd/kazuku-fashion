@@ -14,10 +14,10 @@ export default function Home({collections}) {
   return (
     <>
       <Meta
-        titleShort="kazuku"
-        titleLong="kazuku.Women's Clothing Collections"
+        titleShort="KAZUKI"
+        titleLong="kazukI.Women's Clothing Collections"
         description="Collections of women's clothing.Best women's clothing 2021-2022. KAZUKU live store"
-        keywords="kazuku, Women's Clothing Collections, kazuku live store, Best women's clothing 2021-2022, Moda 2021, 2022"
+        keywords="kazuki, Women's Clothing Collections, kazuku live store, Best women's clothing 2021-2022, Moda 2021, 2022"
       ></Meta>
       <Layout>
         <section className="header-section">
@@ -99,7 +99,7 @@ export default function Home({collections}) {
         </section>
         <section>
           <header className="filter">
-            <div>Most Popular</div>
+            <div>2021</div>
             <div>ホワイトベール</div>
           </header>
           <Grid>
@@ -124,7 +124,7 @@ export default function Home({collections}) {
         </section>
         <section>
           <header className="filter">
-            <div>Most Popular</div>
+            <div>2022</div>
             <div>ホワイトベール</div>
           </header>
           <Grid>

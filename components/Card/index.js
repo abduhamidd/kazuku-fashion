@@ -16,7 +16,7 @@ const Card = ({HREF, SRC, ALT, engCL, jpCL, Year, AS}) => {
             <div className="card__tags">
               <div className="card__tags-line">
                 <h6>
-                  {engCL}/ <span>{jpCL}</span>
+                  {engCL} / <span>{jpCL}</span>
                 </h6>
                 <div className="card__tags-time">{Year}</div>
               </div>
