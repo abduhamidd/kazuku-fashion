@@ -3,6 +3,7 @@ import Layout from './../Layout/index';
 import Grid from './../components/Grid/index';
 import Card from '../components/Card';
 import {useRef, useState} from 'react';
+import Image from 'next/image';
 
 import axios from 'axios';
 export default function Home({collections}) {
@@ -20,13 +21,13 @@ export default function Home({collections}) {
       ></Meta>
       <Layout>
         <section className="header-section">
-          <div className="header-section_logo"></div>
+          <div className="header-section__logo"></div>
           <h2>
             <span>CREATIVE FASHION </span> <span>STREETWEAR DESIGN</span>
           </h2>
           <h1>
             <span className="word" dur="0.95">
-              Kazuku
+              KAZUKU
             </span>
             <span className="italic">
               <span className="word" dur="0.65">
@@ -78,14 +79,15 @@ export default function Home({collections}) {
                     <h4>{mostPopularCollection.by}</h4>
                     <p>{mostPopularCollection.smallInfo}</p>
                     <p>
-                      {' '}
                       Ut enim ad minim veniam, quis nostrud exercitation ullamco
                       laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
                   </section>
                   <div className="img">
-                    <img
-                      src="../public/data/mostPopular/mostPopular.png"
+                    <Image
+                      width={460}
+                      height={250}
+                      src="/data/mostPopular/mostPopular.png"
                       alt=" girl"
                     />
                   </div>
@@ -155,8 +157,6 @@ export const getStaticProps = async (ctx) => {
     `${process.env.API_URL}/api/v.1.0/get-collections`
   );
   const {collections} = res.data;
-  console.log(collections);
-  console.log(collections);
 
   return {
     props: {

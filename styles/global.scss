@@ -1,7 +1,9 @@
-@import './pages/index';
+@import "./pages/index";
 @import "./reset";
 @import "./typography";
-
+@import "./components/Grid";
+@import "./components//Layout";
+@import "./components/Card";
 body {
     background-color: black;
     background-image: url("/texture/sec.jpg");

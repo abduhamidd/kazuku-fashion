@@ -14,6 +14,7 @@ export default class __App extends App {
             content="minimum-scale=0, initial-scale=1.0 , width=device-width"
           />
         </Head>
+
         <AnimateSharedLayout>
           <Component {...pageProps} key={router.route} />
         </AnimateSharedLayout>
