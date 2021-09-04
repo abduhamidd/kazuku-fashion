@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import {motion} from 'framer-motion';
-import Image from 'next/image';
+
 
 const Card = ({HREF, SRC, ALT, engCL, jpCL, Year, AS}) => {
   return (
@@ -12,7 +12,7 @@ const Card = ({HREF, SRC, ALT, engCL, jpCL, Year, AS}) => {
             layoutId={SRC}
             transition={{duration: 0}}
           >
-            <Image src={SRC} alt={ALT} width={446} height={432} />
+            <img src={SRC} alt={ALT} />
             <div className="card__tags">
               <div className="card__tags-line">
                 <h6>

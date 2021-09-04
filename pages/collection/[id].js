@@ -182,12 +182,7 @@ function Collection({collection}) {
           </div>
         </section>
         <section id="collection-collage" className="collage" ref={collageRef}>
-          <Image
-            src={collection.collage}
-            width={1185}
-            height={985}
-            alt={collection.titleEng}
-          />
+          <img src={collection.collage} alt={collection.titleEng} />
           <div className="line" ref={lineRef}>
             <div className="line-img"></div>
           </div>

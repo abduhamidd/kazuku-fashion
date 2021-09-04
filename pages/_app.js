@@ -15,7 +15,7 @@ export default class __App extends App {
           />
         </Head>
 
-        <AnimateSharedLayout>
+        <AnimateSharedLayout type="crossfade">
           <Component {...pageProps} key={router.route} />
         </AnimateSharedLayout>
       </>

@@ -167,12 +167,7 @@ export default function Home({collections}) {
                     </p>
                   </section>
                   <div className="img">
-                    <Image
-                      width={460}
-                      height={250}
-                      src="/data/mostPopular/mostPopular.png"
-                      alt=" girl"
-                    />
+                    <img src="/data/mostPopular/mostPopular.png" alt=" girl" />
                   </div>
                 </div>
               </div>
@@ -247,4 +242,3 @@ export const getStaticProps = async (ctx) => {
     },
   };
 };
-
