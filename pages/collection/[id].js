@@ -124,7 +124,7 @@ function Collection({collection}) {
         titleShort={`KAZUKI | ${collection.titleENG}`}
         titleLong={`KAZUKI | ${collection.titleENG} Collection`}
         description={`KAZUKI | ${collection.titleENG}. ${collection.about}`}
-        keywords="MINO, Women's Clothing Collections, MINO live store, Best women's clothing 2021-2022, Moda 2021, 2022"
+        keywords="KAZUKI, Women's Clothing Collections, MINO live store, Best women's clothing 2021-2022, Moda 2021, 2022"
       />
 
       <Layout>
