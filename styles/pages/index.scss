@@ -98,6 +98,7 @@ $MOBILE_ADAPTIVE: 550px;
         }
 
         span.word {
+            margin-right: 1rem;
             display: inline-block;
             white-space: pre;
         }
@@ -189,17 +190,21 @@ $MOBILE_ADAPTIVE: 550px;
                 padding-bottom: 40px;
 
                 @media screen and (max-width: $PC_ADAPTIVE_MEDIUM) {
-                    padding-top: 20px;
+                    padding-top: 0;
                     padding-bottom: 20px;
                 }
 
                 @media screen and (min-width: 1600px) and (min-height: 900px) {
-                    padding-top: 100px;
+                    padding-top: 10px;
                     padding-bottom: 100px;
                 }
 
                 @media screen and (max-height: $PC_ADAPTIVE_SMALL) {
                     padding-top: 60px;
+                    padding-bottom: 10px;
+                }
+                @media screen and (max-height: $PC_ADAPTIVE_MEDIUM) {
+                    padding-top: 10px;
                     padding-bottom: 10px;
                 }
 

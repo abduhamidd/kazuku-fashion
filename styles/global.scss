@@ -5,6 +5,7 @@
 @import "./components//Layout";
 @import "./components/Card";
 @import "./components/Header";
+@import "./pages/collection/[id]";
 body {
     background-color: black;
     background-image: url("/texture/sec.jpg");

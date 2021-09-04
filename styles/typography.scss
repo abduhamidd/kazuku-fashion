@@ -1,13 +1,14 @@
- @import "./env";
+@import "./env";
 
-h1, .fk-h1 {
+h1,
+.fk-h1 {
     font-family: $mainFont;
     font-style: normal;
     font-weight: bold;
-    font-size: 70px;
+    font-size: 50px;
     line-height: 107px;
     letter-spacing: normal;
-    color: #FFFFFF;
+    color: #ffffff;
 
     @media screen and (min-height: 1000px) and (min-width: 1600px) {
         font-size: 80px;
@@ -26,7 +27,6 @@ h1, .fk-h1 {
     }
 
     &.logo {
-        
         @media screen and (max-width: 700px) {
             text-align: center;
         }
@@ -37,14 +37,15 @@ h1, .fk-h1 {
     }
 }
 
-h2, .fk-h2 {
+h2,
+.fk-h2 {
     font-family: $secondFont;
     font-style: normal;
     font-weight: bold;
     font-size: 54px;
     line-height: 63px;
     letter-spacing: 0.2em;
-    color: #FFFFFF;
+    color: #ffffff;
 
     @media screen and (max-width: 1300px) {
         font-size: 35px;
@@ -59,34 +60,37 @@ h2, .fk-h2 {
     }
 }
 
-h3, .fk-h3 {
+h3,
+.fk-h3 {
     font-family: $secondFont;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 28px;
     letter-spacing: 0.2em;
-    color: #C9C9C9;
+    color: #c9c9c9;
 }
 
-h4, .fk-h4 {
+h4,
+.fk-h4 {
     font-family: $secondFont;
     font-style: normal;
     font-weight: 900;
     font-size: 36px;
     line-height: 42px;
     letter-spacing: 0.2em;
-    color: #C9C9C9;
+    color: #c9c9c9;
 }
 
-h5, .fk-h5 {
+h5,
+.fk-h5 {
     font-family: $mainFont;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 37px;
     letter-spacing: normal;
-    color: #FFFFFF;
+    color: #ffffff;
 
     @media screen and (max-width: 1300px) {
         font-size: 18px;
@@ -95,11 +99,12 @@ h5, .fk-h5 {
     @media screen and (max-width: 700px) {
         font-style: normal;
         font-size: 14px;
-        line-height: 21px;                                                                 
+        line-height: 21px;
     }
 }
 
-h6, .fk-h6 {
+h6,
+.fk-h6 {
     font-family: $secondFont;
     font-style: normal;
     font-weight: bold;
@@ -107,21 +112,24 @@ h6, .fk-h6 {
     line-height: 21px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #ffffff;
 
     @media screen and (min-height: 1000px) and (min-width: 1600px) {
-        font-size: 22px;        
+        font-size: 22px;
     }
 
     @media screen and (max-width: 1300px) {
         font-weight: 500;
         font-size: 14px;
         line-height: 16px;
-        color: #BFBFBF;
+        color: #bfbfbf;
     }
 }
 
-p, i, a, div {
+p,
+i,
+a,
+div {
     font-family: $secondFont;
-    color: #C9C9C9;
+    color: #c9c9c9;
 }

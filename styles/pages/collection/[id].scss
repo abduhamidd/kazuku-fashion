@@ -1,0 +1,373 @@
+$PC_ADAPTIVE_MEDIUM: 1300px;
+$PC_ADAPTIVE_SMALL: 710px;
+$MOBILE_ADAPTIVE: 550px;
+
+.collection {
+    width: 100%;
+    height: 100vh;
+    margin-top: -191px;
+    z-index: -1;
+
+    @media screen and (max-width: $PC_ADAPTIVE_SMALL) {
+        margin-top: -171px;
+    }
+
+    .collection__thumb {
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        max-width: 580px;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            max-width: 580px;
+
+            @media screen and (max-width: $PC_ADAPTIVE_SMALL) {
+                display: none;
+            }
+
+            @media screen and (min-width: 1660px) {
+                max-width: 800px;
+            }
+        }
+
+        @media screen and (min-width: 1660px) {
+            max-width: 800px;
+        }
+    }
+
+    &-img {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: -1;
+
+        img {
+            width: 565px;
+            height: 100%;
+            position: relative;
+            left: 40px;
+            z-index: -1;
+        }
+    }
+}
+
+.collection__h {
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .collection__name {
+        width: 830px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: -25px;
+
+        @media screen and (min-height: 1000px) and (min-width: 1600px) {
+            width: 900px;
+        }
+
+        @media screen and (max-width: $PC_ADAPTIVE_MEDIUM) {
+            width: 700px;
+        }
+    }
+
+    .collection__header-text {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        h5 {
+            font-family: "Questrial", sans-serif;
+
+            @media screen and (max-width: $MOBILE_ADAPTIVE) {
+                margin-top: 10px;
+            }
+        }
+
+        .str1 {
+            display: flex;
+            align-items: center;
+
+            .fk-h2 {
+                margin-left: 20px;
+            }
+        }
+
+        .str2 {
+            h5 {
+                @media screen and (min-height: 1000px) and (min-width: 1600px) {
+                    font-size: 26px;
+                }
+            }
+        }
+
+        .str3 {
+            width: 100%;
+            height: 100px;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                font-family: "Questrial", sans-serif;
+                width: 60vw;
+                max-width: 553px;
+                font-size: 16px;
+                line-height: 22px;
+                letter-spacing: 0.05em;
+                color: #e7e7e7;
+
+                @media screen and (min-height: 1000px) and (min-width: 1600px) {
+                    font-size: 20px;
+                    line-height: 26px;
+                    max-width: 663px;
+                }
+
+                @media screen and (max-width: 1300px) {
+                    font-size: 14px;
+                }
+
+                @media screen and (max-width: $MOBILE_ADAPTIVE) {
+                    font-size: 12px;
+                    line-height: 18px;
+                    width: 100%;
+                }
+            }
+
+            .time {
+                font-family: "Questrial", sans-serif;
+                max-width: 553px;
+                font-size: 16px;
+                line-height: 22px;
+                letter-spacing: 0.05em;
+                color: #e7e7e7;
+
+                @media screen and (min-height: 1000px) and (min-width: 1600px) {
+                    font-size: 20px;
+                    line-height: 26px;
+                }
+
+                @media screen and (max-width: $MOBILE_ADAPTIVE) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.collage {
+    width: 100%;
+    margin-top: 80px;
+    min-height: 900px;
+
+    @media screen and (min-width: 1660px) {
+        min-height: 1300px;
+    }
+
+    @media screen and (max-width: 700px) {
+        margin-top: -60px;
+        min-height: 0;
+    }
+
+    Image {
+        object-position: center;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.line {
+    width: 12px;
+    height: 125px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .line-img {
+        width: 12px;
+        height: 125px;
+        background-image: url("/static/line.png");
+        background-repeat: no-repeat;
+    }
+}
+
+.about {
+    h6 {
+        color: rgb(119, 119, 119);
+        letter-spacing: 0.1em;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 20px;
+        }
+
+        @media screen and (max-width: $PC_ADAPTIVE_MEDIUM) {
+            font-size: 12px;
+            font-weight: 700;
+        }
+    }
+
+    .fk-h1 {
+        font-family: $mainFont;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 107
+        px;
+        color: #ffffff;
+        margin-top: 30px;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 90px;
+            line-height: 112px;
+        }
+
+        @media screen and (max-width: $PC_ADAPTIVE_MEDIUM) {
+            font-size: 60px;
+            line-height: 97px;
+        }
+
+        @media screen and (max-width: $MOBILE_ADAPTIVE) {
+            font-family: Bodoni Moda;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 26px;
+            line-height: 40px;
+            color: #ebebeb;
+        }
+    }
+
+    .prod {
+        margin-top: 30px;
+
+        .prof {
+            font-family: $mainFont;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 27px;
+            text-transform: capitalize;
+            color: #bfbfbf;
+
+            @media screen and (min-width: 1660px) {
+                font-size: 22px;
+            }
+
+            @media screen and (max-width: $PC_ADAPTIVE_MEDIUM) {
+                font-size: 16px;
+            }
+
+            @media screen and (max-width: 700px) {
+                font-family: $mainFont;
+                font-style: italic;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 27px;
+                text-transform: capitalize;
+                color: #bfbfbf;
+            }
+        }
+
+        .name {
+            font-family: $secondFont;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 21px;
+            text-transform: capitalize;
+            color: #bfbfbf;
+            margin-left: 10px;
+
+            @media screen and (min-width: 1660px) {
+                font-size: 22px;
+            }
+
+            @media screen and (max-width: $PC_ADAPTIVE_MEDIUM) {
+                font-size: 16px;
+            }
+
+            @media screen and (max-width: 700px) {
+                font-family: $secondFont;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 21px;
+                text-transform: capitalize;
+                color: #bfbfbf;
+            }
+        }
+    }
+}
+
+.anchors {
+    height: 70px;
+    box-sizing: border-box;
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-between;
+
+    .two {
+        margin-left: 10px;
+    }
+
+    a {
+        cursor: pointer;
+    }
+
+    a,
+    .year {
+        font-family: $secondFont;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+
+        @media screen and (min-width: 1660px) {
+            font-size: 22px;
+        }
+
+        @media screen and (max-width: $PC_ADAPTIVE_MEDIUM) {
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: $PC_ADAPTIVE_SMALL) {
+            font-size: 14px;
+        }
+
+        span {
+            color: #949494;
+            transition-duration: 0.85s;
+
+            &:nth-child(1),
+            &:nth-child(4),
+            &:nth-child(7),
+            &:nth-child(12) {
+                transition-duration: 0.45s;
+            }
+
+            &:nth-child(5),
+            &:nth-child(10),
+            &:nth-child(16) {
+                transition-duration: 0.25s;
+            }
+
+            &:nth-child(2),
+            &:nth-child(9),
+            &:nth-child(15) {
+                transition-duration: 0.65s;
+            }
+        }
+
+        &:hover span {
+            color: #3d3d3d;
+        }
+    }
+}

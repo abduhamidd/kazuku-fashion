@@ -2,15 +2,97 @@ import Meta from './../components/Meta/index';
 import Layout from './../Layout/index';
 import Grid from './../components/Grid/index';
 import Card from '../components/Card';
-import {useRef, useState} from 'react';
+import {useRef, useState, useEffect} from 'react';
 import Image from 'next/image';
-
+import gsap from 'gsap';
+import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
 import axios from 'axios';
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.core.globals('ScrollTrigger', ScrollTrigger);
+
 export default function Home({collections}) {
   const mostPopularCollection = collections.find(
     ({mostPopular}) => mostPopular
   );
   const mostPopularRef = useRef();
+  useEffect(() => {
+    {
+      ScrollTrigger.refresh();
+      const targets = document.querySelectorAll('.header-section .word');
+
+      const width = window.innerWidth;
+      const start = width > 500 ? 300 : 200;
+
+      const typeDevice = width >= 700 ? 'Desktop' : 'Mobile';
+      const valuesForTransform = ['-10', '20', '-10', '20', '-20', '2.5', '25'];
+
+      targets.forEach((target, i) => {
+        const timeline = gsap.timeline({
+          scrollTrigger: {
+            id: 'trigger3',
+            trigger: target,
+            start: `top top+=${start}`,
+            scrub: true,
+          },
+        });
+
+        if (typeDevice === 'Desktop') {
+          timeline.fromTo(
+            target,
+            {
+              opacity: 1,
+              transitionDuration: target.attributes.dur.nodeValue / 2,
+            },
+            {
+              opacity: 0,
+              transitionDuration: target.attributes.dur.nodeValue / 2,
+            }
+          );
+        } else if (typeDevice === 'Mobile') {
+          timeline.fromTo(
+            target,
+            {
+              opacity: 1,
+              transitionDuration: target.attributes.dur.nodeValue / 2,
+              translateX: 0,
+            },
+            {
+              opacity: 0,
+              transitionDuration: target.attributes.dur.nodeValue / 2,
+              translateX: valuesForTransform[i],
+            }
+          );
+        }
+      });
+    }
+    {
+      const height = window.innerHeight;
+      const width = window.innerWidth;
+
+      const PC_ADAPTIVE = height > 1000 ? height / 3 : height / 4.5;
+
+      if (width > 500) {
+        const timeline = gsap.timeline({
+          scrollTrigger: {
+            id: 'trigger3',
+            trigger: mostPopularRef.current,
+            start: `top bottom-=${PC_ADAPTIVE}`,
+            end: `center-=400`,
+            scrub: true,
+          },
+        });
+
+        timeline.fromTo(
+          mostPopularRef.current,
+          {opacity: 0, transitionDuration: 0.9},
+          {opacity: 1, transitionDuration: 1}
+        );
+      } else {
+        console.log('GSAP OFF');
+      }
+    }
+  }, []);
   return (
     <>
       <Meta
@@ -27,7 +109,7 @@ export default function Home({collections}) {
           </h2>
           <h1>
             <span className="word" dur="0.95">
-              KAZUKU
+              KAZUKI
             </span>
             <span className="italic">
               <span className="word" dur="0.65">
@@ -64,8 +146,9 @@ export default function Home({collections}) {
           <Grid>
             <Card
               key={mostPopularCollection.id}
-              HREF="/collection/[id]"
-              AS={`/collection/${mostPopularCollection.id}`}
+              HREF={`/collection/${encodeURIComponent(
+                mostPopularCollection.id
+              )}`}
               SRC={mostPopularCollection.coverImg}
               ALT={`${mostPopularCollection.titleEng},by ${mostPopularCollection.by}`}
               engCL={mostPopularCollection.titleENG}
@@ -156,7 +239,7 @@ export const getStaticProps = async (ctx) => {
   const res = await axios.get(
     `${process.env.API_URL}/api/v.1.0/get-collections`
   );
-  const {collections} = res.data;
+  const {collections} = await res.data;
 
   return {
     props: {
@@ -164,3 +247,4 @@ export const getStaticProps = async (ctx) => {
     },
   };
 };
+
